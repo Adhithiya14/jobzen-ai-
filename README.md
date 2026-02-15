@@ -1,22 +1,12 @@
 \# JobZen – AI-Powered Career Assistant
 
-
-
 JobZen is a full-stack AI-powered career preparation platform designed to help students and job seekers prepare for placements effectively.
-
-
 
 It combines resume analysis, mock interviews, aptitude practice, chat-based assistance, and job recommendations into one intelligent system.
 
-
-
 ---
 
-
-
 \## Features
-
-
 
 \### Resume Analyzer
 
@@ -26,8 +16,6 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 
 \- AI-based improvement suggestions
 
-
-
 \### Mock Interviews
 
 \- AI-generated interview questions
@@ -35,8 +23,6 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 \- Technical \& HR rounds
 
 \- Real-time response evaluation
-
-
 
 \### Aptitude Practice
 
@@ -46,8 +32,6 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 
 \- Score tracking
 
-
-
 \### AI Chat Assistant
 
 \- Career guidance
@@ -56,23 +40,15 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 
 \- Resume feedback
 
-
-
 \### Smart Recommendations
 
 \- Job suggestions based on skills
 
 \- Personalized career insights
 
-
-
 ---
 
-
-
 \## Tech Stack
-
-
 
 \### Frontend
 
@@ -81,8 +57,6 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 \- JavaScript
 
 \- CSS
-
-
 
 \### Backend
 
@@ -94,15 +68,9 @@ It combines resume analysis, mock interviews, aptitude practice, chat-based assi
 
 \- AI-based services
 
-
-
 ---
 
-
-
 \## Project Structure
-
-
 
 ```bash
 
@@ -130,31 +98,38 @@ JobZen/
 
 ```
 
+---
 
+## Setting Up Environment Variables
+
+1. Copy the `.env.example` file to create a `.env` file:
+
+   ```bash
+   cp .env.example .env
 
 ---
 
+---
 
+## Getting LLM key from gemini
+
+1. Visit Google AI Studio
+2. Sign in with your Google account
+3. Click on "Get API Key" or "Create API Key"
+4. Copy the generated API key
+5. Add the API key to your .env file
+
+---
 
 \## How to Run the Project
 
-
-
 Open two terminals: one for backend and one for frontend.
-
-
 
 ---
 
-
-
 \### Prerequisites
 
-
-
 Ensure the following are installed:
-
-
 
 \- Python (3.9 or above)
 
@@ -164,15 +139,9 @@ Ensure the following are installed:
 
 \- Git (optional)
 
-
-
 ---
 
-
-
 \### Step 1: Clone the Repository
-
-
 
 ```bash
 
@@ -180,15 +149,9 @@ git clone https://github.com/Adhithiya14/Jobzen.git
 
 ```
 
-
-
 ---
 
-
-
 \### Step 2: Go into the Project Folder
-
-
 
 ```bash
 
@@ -196,15 +159,9 @@ cd Jobzen
 
 ```
 
-
-
 ---
 
-
-
 \### Step 3: Setup Backend
-
-
 
 ```bash
 
@@ -216,27 +173,15 @@ uvicorn app.main:app --reload
 
 ```
 
-
-
 Backend runs at:
 
-
-
-http://localhost:8000
-
-
+<http://localhost:8000>
 
 ---
 
-
-
 \### Step 4: Setup Frontend
 
-
-
 Open a second terminal:
-
-
 
 ```bash
 
@@ -248,23 +193,13 @@ npm run dev
 
 ```
 
-
-
 Frontend runs at:
 
-
-
-http://localhost:5173
-
-
+<http://localhost:5173>
 
 ---
 
-
-
 \## Notes
-
-
 
 \- Ensure backend is running before starting frontend
 
@@ -274,11 +209,4 @@ http://localhost:5173
 
 \- Database file (database.db) will be created automatically
 
-
-
 ---
-
-
-
-
-
