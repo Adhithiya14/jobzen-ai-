@@ -211,13 +211,15 @@ export default function Dashboard() {
                                         </div>
                                     )}
 
-                                    {job.apply_link ? (
-                                        <a href={job.apply_link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
-                                            <button className="btn primary" style={{ width: '100%' }}>Apply directly on {job.source || "Website"}</button>
-                                        </a>
-                                    ) : (
-                                        <button className="btn primary" style={{ marginTop: 'auto' }}>Apply Now</button>
-                                    )}
+                                    <a 
+                                        href={job.apply_link || "#"} 
+                                        target={job.apply_link ? "_blank" : "_self"} 
+                                        rel="noopener noreferrer" 
+                                        className="btn primary" 
+                                        style={{ marginTop: 'auto', textDecoration: 'none', textAlign: 'center', width: '100%', display: 'inline-block' }}
+                                    >
+                                        {job.apply_link ? `Apply on ${job.source || "Website"}` : "Apply Now"}
+                                    </a>
                                 </div>
                             ))}
                         </div>

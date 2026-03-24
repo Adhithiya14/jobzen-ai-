@@ -128,6 +128,10 @@ class JobAggregatorService:
             # We pass the JD as the "text" and the user's skills as the targets
             score, _ = resume_service._compute_ats_score(desc, skills)
             
+            # If the user hasn't uploaded a resume yet (no skills provided), give heavily matched generic score
+            if not skills:
+                score = 85
+            
             # 8. Only include jobs with match_score >= 60%
             if score >= 60:
                 scored_jobs.append(JobOutput(
