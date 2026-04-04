@@ -190,8 +190,8 @@ export default function Dashboard() {
                                         </div>
                                     )}
 
-                                    <a href={job.apply_link || "#"} target="_blank" rel="noopener noreferrer" className="btn primary" style={{ width: '100%', borderRadius: '12px' }}>
-                                        {job.apply_link ? `Apply via ${job.source}` : "Apply Directly"}
+                                    <a href={job.apply_link || "#"} target="_blank" rel="noopener noreferrer" className="btn primary" style={{ width: '100%', borderRadius: '12px', justifyContent: 'center' }}>
+                                        Apply Now
                                     </a>
                                 </div>
                             ))}

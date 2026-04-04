@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, FileText, CheckCircle, AlertCircle } from 'lucide-react';
+import { Upload, FileText, CheckCircle, AlertCircle, RefreshCw, ExternalLink } from 'lucide-react';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -254,7 +254,7 @@ export default function Resume() {
                                                     rel="noopener noreferrer" 
                                                     className="icon-btn" 
                                                     style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '0.75rem' }}
-                                                    title={`Apply on ${job.source}`}
+                                                    title="Apply Now"
                                                 >
                                                     <ExternalLink size={20} />
                                                 </a>

@@ -347,7 +347,7 @@ export default function MockTest() {
 
             {/* Main Video Interface */}
             {(step === 'interview' || step === 'feedback' || step === 'round-intro' || step === 'complete') && (
-                <div style={{ display: 'flex', flexDirection: 'column', flex: 1, height: '100%', animation: 'fadeIn 0.5s ease' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: '100%', animation: 'fadeIn 0.5s ease' }}>
                     {interviewMode === 'full' && (
                         <div style={{ 
                             display: 'flex', 
@@ -502,55 +502,7 @@ export default function MockTest() {
                                 </div>
                             )}
 
-                            {/* Feedback Overlay */}
-                            {step === 'feedback' && feedback && (
-                                <div style={{ 
-                                    position: 'absolute', 
-                                    inset: 0, 
-                                    background: 'rgba(11, 15, 21, 0.95)', 
-                                    backdropFilter: 'blur(20px)',
-                                    display: 'flex', 
-                                    flexDirection: 'column', 
-                                    alignItems: 'center', 
-                                    justifyContent: 'center', 
-                                    padding: '3rem', 
-                                    textAlign: 'center', 
-                                    zIndex: 50 
-                                }}>
-                                    <div style={{ 
-                                        width: '120px',
-                                        height: '120px',
-                                        borderRadius: '50%',
-                                        background: feedback.score > 7 ? 'rgba(16, 185, 129, 0.1)' : 'rgba(245, 158, 11, 0.1)',
-                                        border: `2px solid ${feedback.score > 7 ? 'var(--success)' : 'var(--warning)'}`,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        marginBottom: '1.5rem',
-                                        boxShadow: feedback.score > 7 ? '0 0 40px rgba(16, 185, 129, 0.2)' : '0 0 40px rgba(245, 158, 11, 0.2)'
-                                    }}>
-                                        <div style={{ fontSize: '3rem', fontWeight: '900', color: feedback.score > 7 ? 'var(--success)' : 'var(--warning)' }}>
-                                            {feedback.score}
-                                        </div>
-                                        <div style={{ fontSize: '0.7rem', fontWeight: '800', opacity: 0.6 }}>SCORE</div>
-                                    </div>
-                                    
-                                    <h3 style={{ margin: '0 0 1rem', color: '#fff', fontSize: '1.8rem' }}>Performance Review</h3>
-                                    <p style={{ fontSize: '1.1rem', maxWidth: '600px', lineHeight: 1.6, marginBottom: '2.5rem', color: 'var(--text-secondary)' }}>
-                                        {feedback.feedback.split('.')[0]}. {feedback.feedback.split('.')[1]}.
-                                    </p>
-
-                                    <button
-                                        onClick={nextQuestion}
-                                        className="btn primary"
-                                        style={{ padding: '1rem 4rem', fontSize: '1.1rem', borderRadius: '16px' }}
-                                        disabled={loading}
-                                    >
-                                        {loading ? <RefreshCw className="spin" size={20} /> : <>Next Question <Play size={20} /></>}
-                                    </button>
-                                </div>
-                            )}
+                            {/* Feedback Overlay was here but has been removed as it's redundant with the right-side Insight Report */}
 
                             {/* Complete Overlay for Round */}
                             {step === 'complete' && (
@@ -606,8 +558,7 @@ export default function MockTest() {
                                 borderRadius: '24px',
                                 display: 'flex', 
                                 flexDirection: 'column', 
-                                gap: '1.5rem',
-                                height: 'fit-content'
+                                gap: '1.5rem'
                             }}>
                             {step === 'feedback' && feedback ? (
                                 /* --- Feedback / Result Mode --- */
